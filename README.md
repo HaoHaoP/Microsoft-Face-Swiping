@@ -1,7 +1,5 @@
 # MicrosoftFaceSwiping
 
----
-
 [![](https://jitpack.io/v/HaoHaoP/Microsoft-Face-Swiping.svg)](https://jitpack.io/#HaoHaoP/Microsoft-Face-Swiping)
 
 An Android project using Microsoft Face API to swiping face
