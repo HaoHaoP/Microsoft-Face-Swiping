@@ -6,7 +6,7 @@ An Android project using Microsoft Face API to swiping face
 
 ## Gradle
 
-```
+```gradle
 allprojects {
 	repositories {
 		...
@@ -15,7 +15,7 @@ allprojects {
 }
 ```
 
-```
+```gradle
 dependencies {
     implementation 'com.github.HaoHaoP:Microsoft-Face-Swiping:0.0.1'
 }
@@ -23,7 +23,7 @@ dependencies {
 
 ## Use
 
-```
+```java
 /**
  * FaceSwiping
  *
@@ -35,7 +35,7 @@ dependencies {
  */
 ```
 
-```
+```java
 faceSwiping = new FaceSwiping(this, surfaceView, baseUrl, key, groupName)
     .setConfidence(0.8)
     .setLoopTime(2000)
@@ -66,7 +66,7 @@ faceSwiping = new FaceSwiping(this, surfaceView, baseUrl, key, groupName)
     }).start();
 ```
 
-```
+```java
 @Override
 protected void onRestart() {
     super.onRestart();
@@ -74,7 +74,7 @@ protected void onRestart() {
 }
 ```
 
-```
+```java
 @Override
 protected void onPause() {
     super.onPause();
