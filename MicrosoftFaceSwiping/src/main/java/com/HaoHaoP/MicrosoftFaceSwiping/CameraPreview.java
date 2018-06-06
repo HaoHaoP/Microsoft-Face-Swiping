@@ -11,6 +11,30 @@ import android.view.SurfaceView;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * MIT License
+ * <p>
+ * Copyright (c) 2018 皓皓P
+ * <p>
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * <p>
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ * <p>
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
 @SuppressLint("ViewConstructor")
 public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback {
     private Camera myCamera;
@@ -43,7 +67,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         }
     }
 
-    public static  Camera.Size getCloselyPreSize(boolean isPortrait, int surfaceWidth, int surfaceHeight, List<Camera.Size> preSizeList) {
+    public static Camera.Size getCloselyPreSize(boolean isPortrait, int surfaceWidth, int surfaceHeight, List<Camera.Size> preSizeList) {
         int reqTmpWidth;
         int reqTmpHeight;
         // 当屏幕为垂直的时候需要把宽高值进行调换，保证宽大于高
@@ -55,8 +79,8 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
             reqTmpHeight = surfaceHeight;
         }
         //先查找preview中是否存在与surfaceview相同宽高的尺寸
-        for(Camera.Size size : preSizeList){
-            if((size.width == reqTmpWidth) && (size.height == reqTmpHeight)){
+        for (Camera.Size size : preSizeList) {
+            if ((size.width == reqTmpWidth) && (size.height == reqTmpHeight)) {
                 return size;
             }
         }
@@ -95,7 +119,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 
     }
 
-    public void release(){
+    public void release() {
         if (myCamera != null) {
             //关闭预览并释放资源
             myCamera.setPreviewCallback(null);

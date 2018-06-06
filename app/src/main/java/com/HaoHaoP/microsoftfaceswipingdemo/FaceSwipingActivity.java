@@ -33,6 +33,7 @@ public class FaceSwipingActivity extends AppCompatActivity {
         String key = intent.getStringExtra("key");
         String groupName = intent.getStringExtra("groupName");
         surfaceView = findViewById(R.id.surface);
+
         faceSwiping = new FaceSwiping(this, surfaceView, baseUrl, key, groupName)
                 .setConfidence(0.8)
                 .setLoopTime(2000)
@@ -42,7 +43,7 @@ public class FaceSwipingActivity extends AppCompatActivity {
                     public void onError(int error) {
                         switch (error) {
                             case TIME_OUT:
-                                Toast.makeText(FaceSwipingActivity.this,"识别超时",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(FaceSwipingActivity.this, "TimeOut", Toast.LENGTH_SHORT).show();
                                 finish();
                                 break;
                             case CALL_BACK_ERROR:
