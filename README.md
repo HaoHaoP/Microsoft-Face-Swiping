@@ -17,7 +17,7 @@ allprojects {
 
 ```gradle
 dependencies {
-    implementation 'com.github.HaoHaoP:Microsoft-Face-Swiping:0.0.1'
+    implementation 'com.github.HaoHaoP:Microsoft-Face-Swiping:0.0.2'
 }
 ```
 
