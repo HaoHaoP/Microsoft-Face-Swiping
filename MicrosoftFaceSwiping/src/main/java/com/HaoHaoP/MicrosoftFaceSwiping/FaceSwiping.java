@@ -73,6 +73,7 @@ public class FaceSwiping {
 
     public static final int CALL_BACK_ERROR = -1;
     public static final int VALUE_ERROR = -2;
+    public static final int CAMERA_ERROR = -3;
     public static final int TIME_OUT = 0;
 
     /**
@@ -189,7 +190,7 @@ public class FaceSwiping {
                 }
             }
         } catch (Exception e) {
-            Toast.makeText(context, "打开相机失败", Toast.LENGTH_SHORT).show();
+            faceCallBack.onError(CAMERA_ERROR);
         }
         return c;
     }

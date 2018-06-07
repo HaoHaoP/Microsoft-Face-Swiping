@@ -50,8 +50,12 @@ faceSwiping = new FaceSwiping(this, surfaceView, baseUrl, key, groupName)
                     finish();
                     break;
                 case CALL_BACK_ERROR:
-                break;
+                    break;
                 case VALUE_ERROR:
+                    break;
+                case CAMERA_ERROR:
+                    Toast.makeText(FaceSwipingActivity.this, "Open Camera error", Toast.LENGTH_SHORT).show();
+                    finish();
                     break;
             }
         }

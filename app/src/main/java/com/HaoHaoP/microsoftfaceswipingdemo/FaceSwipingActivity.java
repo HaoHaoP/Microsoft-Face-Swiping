@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.HaoHaoP.MicrosoftFaceSwiping.FaceSwiping;
 
 import static com.HaoHaoP.MicrosoftFaceSwiping.FaceSwiping.CALL_BACK_ERROR;
+import static com.HaoHaoP.MicrosoftFaceSwiping.FaceSwiping.CAMERA_ERROR;
 import static com.HaoHaoP.MicrosoftFaceSwiping.FaceSwiping.TIME_OUT;
 import static com.HaoHaoP.MicrosoftFaceSwiping.FaceSwiping.VALUE_ERROR;
 
@@ -49,6 +50,10 @@ public class FaceSwipingActivity extends AppCompatActivity {
                             case CALL_BACK_ERROR:
                                 break;
                             case VALUE_ERROR:
+                                break;
+                            case CAMERA_ERROR:
+                                Toast.makeText(FaceSwipingActivity.this, "Open Camera error", Toast.LENGTH_SHORT).show();
+                                finish();
                                 break;
                         }
                     }
